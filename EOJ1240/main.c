@@ -1,15 +1,21 @@
-//
-//  main.c
-//  EOJ1240
-//
-//  Created by frank on 15-11-22.
-//  Copyright (c) 2015年 frank. All rights reserved.
-//
-
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    int T,COUNT,i;
+    COUNT = 1;
+    scanf("%d",&T);
+    getchar();
+    while(T-->0){
+        char buf[51];
+        gets(buf);
+        for(i=0;i<strlen(buf);i++){
+            if(buf[i]=='Z')buf[i]='A';
+            else buf[i]++;
+        }
+        printf("String #%d\n",COUNT++);
+        printf("%s\n",buf);
+        printf("\n");
+    }
     return 0;
 }
